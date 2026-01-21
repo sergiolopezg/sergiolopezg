@@ -8,100 +8,207 @@
         /* Estilos Generales - Estética Gaming */
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: #0b0e14;
             color: white;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         /* Hero Section con gradiente Rocket League */
         .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.wallpapersden.com') center/cover;
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(11, 14, 20, 1)), 
+                        url('https://images.alphacoders.com') center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            border-bottom: 5px solid #ff4e00; /* Naranja Team */
+            border-bottom: 5px solid #ff4e00;
         }
 
         .hero h1 {
-            font-size: 5rem;
+            font-size: clamp(3rem, 8vw, 6rem);
             text-transform: uppercase;
             letter-spacing: 5px;
             margin: 0;
-            text-shadow: 0 0 20px #00a2ff; /* Azul Team */
+            text-shadow: 0 0 20px #00a2ff, 0 0 40px #00a2ff;
         }
 
         /* Botón con efecto Neón */
         .btn-play {
             margin-top: 30px;
-            padding: 15px 40px;
-            font-size: 1.2rem;
+            padding: 18px 50px;
+            font-size: 1.3rem;
             background: transparent;
             color: #00a2ff;
             border: 2px solid #00a2ff;
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.4s ease;
             text-transform: uppercase;
             font-weight: bold;
-            box-shadow: 0 0 10px #00a2ff;
-            <img src=" <img src="https://img.redbull.com/images/c_crop,w_1920,h_960,x_0,y_0/c_auto,w_1200,h_600/f_auto,q_auto/redbullcom/2023/8/24/t95pz5f1ci0nfkeqs0bd/rocket-league-consejos" alt="Rocket League: 10 mejores consejos para principiantes"> 
+            box-shadow: 0 0 15px rgba(0, 162, 255, 0.4);
+            border-radius: 5px;
         }
 
         .btn-play:hover {
             background: #00a2ff;
             color: #000;
-            box-shadow: 0 0 30px #00a2ff;
+            box-shadow: 0 0 40px #00a2ff;
+            transform: scale(1.05);
         }
 
-        /* Contenido Principal */
+        /* Contenedor Principal */
         .container {
-            padding: 50px 10%;
+            padding: 60px 10%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Grid de Noticias/Cards */
+        .grid-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 30px;
+            margin-top: -50px; /* Eleva las cards sobre el hero */
         }
 
         .card {
             background: #1a1f29;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid #ff4e00;
-            transition: transform 0.3s;
+            border-radius: 15px;
+            overflow: hidden;
+            border-bottom: 4px solid #ff4e00;
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
+            border-bottom: 4px solid #00a2ff;
         }
 
-        .card h3 { color: #ff4e00; }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 { 
+            color: #ff4e00; 
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+        /* Galería de Temporada */
+        .gallery-section {
+            padding: 60px 10%;
+            background: #080a0e;
+        }
+
+        .gallery-title {
+            text-align: center;
+            color: #00a2ff;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 200px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+            filter: grayscale(50%);
+        }
+
+        .gallery-item:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #05070a;
+            border-top: 1px solid #333;
+            color: #666;
+        }
+
     </style>
 </head>
 <body>
 
     <section class="hero">
         <h1>ROCKET LEAGUE</h1>
-        <p>El mejor juego que combina fútbol y coches.</p>
-        <button class="btn-play">¡JUGAR AHORA!</button>
+        <p style="font-size: 1.5rem; color: #ccc;">Temporada 21: El Futuro del Soccar</p>
+        <a href="https://www.rocketleague.com" target="_blank">
+            <button class="btn-play">¡JUGAR AHORA!</button>
+        </a>
     </section>
 
-    <div class="container">
-        <div class="card">
-            <h3>Garaje 2026</h3>
-            <p>Personaliza tu Octane con los nuevos ítems de la Temporada 21.</p>
+    <main class="container">
+        <div class="grid-cards">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://img.redbull.com" alt="Garaje">
+                <div class="card-content">
+                    <h3>Garaje 2026</h3>
+                    <p>Explora el nuevo mercado de ítems cuánticos. Personaliza tu Octane con efectos de luz dinámica.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://images.alphacoders.com" alt="eSports">
+                <div class="card-content">
+                    <h3>RLCS Finales</h3>
+                    <p>No te pierdas el campeonato mundial en Neo Tokyo. Recompensas exclusivas por ver en Twitch.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://images.alphacoders.com" alt="Ranks">
+                <div class="card-content">
+                    <h3>Ranks Globales</h3>
+                    <p>¿Tienes lo necesario para llegar a Leyenda Supersónica? El nuevo sistema de MMR ya está activo.</p>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <h3>eSports</h3>
-            <p>Sigue las finales de la RLCS en directo y gana recompensas.</p>
+    </main>
+
+    <section class="gallery-section">
+        <h2 class="gallery-title">Nuevos Arenas 2026</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://images7.alphacoders.com" alt="Arena 1"></div>
+            <div class="gallery-item"><img src="https://images8.alphacoders.com" alt="Arena 2"></div>
+            <div class="gallery-item"><img src="https://images6.alphacoders.com" alt="Arena 3"></div>
+            <div class="gallery-item"><img src="https://images.alphacoders.com" alt="Arena 4"></div>
         </div>
-        <div class="card">
-            <h3>Ranks</h3>
-            <p>Consulta tu posición global y compite contra los mejores del mundo.</p>
-        </div>
-    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Rocket League Fan Community. Todos los derechos reservados.</p>
+        <p>Este es un sitio creado por fans para fans.</p>
+    </footer>
 
 </body>
 </html>
