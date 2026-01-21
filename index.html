@@ -1,6 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket League Fan Page | 2026</title>
+    <style>
+        /* Estilos Generales - Estética Gaming */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0e14;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section con gradiente Rocket League */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.wallpapersden.com') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 5px solid #ff4e00; /* Naranja Team */
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin: 0;
+            text-shadow: 0 0 20px #00a2ff; /* Azul Team */
+        }
+
+        /* Botón con efecto Neón */
+        .btn-play {
+            margin-top: 30px;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            background: transparent;
+            color: #00a2ff;
+            border: 2px solid #00a2ff;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 0 10px #00a2ff;
+        }
+
+        .btn-play:hover {
+            background: #00a2ff;
+            color: #000;
+            box-shadow: 0 0 30px #00a2ff;
+        }
+
+        /* Contenido Principal */
+        .container {
+            padding: 50px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1a1f29;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ff4e00;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 { color: #ff4e00; }
+    </style>
+</head>
 <body>
-Hola mundo  
-</body> 
+
+    <section class="hero">
+        <h1>ROCKET LEAGUE</h1>
+        <p>Domina la arena. Marca el gol de tu vida.</p>
+        <button class="btn-play">¡JUGAR AHORA!</button>
+    </section>
+
+    <div class="container">
+        <div class="card">
+            <h3>Garaje 2026</h3>
+            <p>Personaliza tu Octane con los nuevos ítems de la Temporada 18.</p>
+        </div>
+        <div class="card">
+            <h3>eSports</h3>
+            <p>Sigue las finales de la RLCS en directo y gana recompensas.</p>
+        </div>
+        <div class="card">
+            <h3>Ranks</h3>
+            <p>Consulta tu posición global y compite contra los mejores del mundo.</p>
+        </div>
+    </div>
+
+</body>
 </html>
