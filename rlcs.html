@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>RLCS 2026 | Hub Competitivo</title>
+    <style>
+        body { background-color: #0b0e14; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; }
+        .header-rlcs { background: linear-gradient(45deg, #00a2ff, #7000ff); padding: 60px 10%; text-align: center; border-bottom: 5px solid #fff; }
+        .nav-back { padding: 15px; background: #05070a; border-bottom: 1px solid #333; }
+        .nav-back a { color: #00a2ff; text-decoration: none; font-weight: bold; }
+        
+        .event-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 40px 10%; }
+        .event-card { background: #1a1f29; padding: 25px; border-radius: 12px; border-left: 5px solid #00a2ff; position: relative; }
+        .event-card.major { border-left-color: #ff4e00; }
+        .status { position: absolute; top: 15px; right: 20px; font-size: 0.8rem; background: #00a2ff; padding: 3px 8px; border-radius: 4px; }
+        
+        .rewards-section { background: #111; padding: 50px 10%; text-align: center; border-top: 1px solid #333; }
+        .reward-item { display: inline-block; width: 150px; margin: 15px; text-align: center; }
+        .reward-item img { width: 100%; border-radius: 10px; border: 2px solid #444; }
 
+        .btn-twitch { background: #9146ff; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 20px; }
+        .btn-twitch:hover { background: #a970ff; }
+    </style>
+</head>
+<body>
+
+<nav class="nav-back">
+    <a href="index.html">← Volver al Inicio</a>
+</nav>
+
+<header class="header-rlcs">
+    <h1>RLCS 2026 SEASON</h1>
+    <p>El camino hacia el World Championship comienza aquí</p>
+</header>
+
+<main class="event-grid">
+    <!-- Major 1 -->
+    <div class="event-card major">
+        <span class="status" style="background:#ff4e00">EN VIVO</span>
+        <h2>Major 1: Boston</h2>
+        <p><strong>Fecha:</strong> 19 - 22 de Febrero, 2026</p>
+        <p><strong>Sede:</strong> Agganis Arena, EE. UU.</p>
+        <p>Los 16 mejores equipos del mundo compiten por un pozo de <strong>$345,000 USD</strong>.</p>
+    </div>
+
+    <!-- Major 2 -->
+    <div class="event-card">
+        <span class="status">PRÓXIMAMENTE</span>
+        <h2>Major 2: París</h2>
+        <p><strong>Fecha:</strong> 20 - 24 de Mayo, 2026</p>
+        <p><strong>Sede:</strong> La Défense Arena, Francia</p>
+        <p>El "toque francés" llega al escenario internacional con la arena Parc de Paris.</p>
+    </div>
+
+    <!-- World Championship -->
+    <div class="event-card major">
+        <span class="status" style="background:#ffd700; color: black;">FINAL DE TEMPORADA</span>
+        <h2>World Championship</h2>
+        <p><strong>Fecha:</strong> 15 - 20 de Septiembre, 2026</p>
+        <p><strong>Pozo:</strong> $1,200,000 USD</p>
+        <p>20 equipos. Solo una corona mundial.</p>
+    </div>
+</main>
+
+<section class="rewards-section">
+    <h2>🎁 Fan Rewards de Temporada</h2>
+    <p>Conecta tu cuenta y gana objetos exclusivos viendo los directos oficiales.</p>
+    
+    <div class="reward-item">
+        <img src="https://rocketleague.media.zestyio.com" alt="Big Splash">
+        <p>Explosión Big Splash</p>
+    </div>
+    <div class="reward-item">
+        <img src="https://rocketleague.media.zestyio.com" alt="Aero Mage">
+        <p>Ruedas Aero Mage</p>
+    </div>
+
+    <br>
+    <a href="https://esports.rocketleague.com" class="btn-twitch" target="_blank">Vincular mi cuenta de Twitch</a>
+</section>
+
+<footer style="text-align:center; padding:30px; color:#666;">
+    <p>Datos oficiales vía <a href="
