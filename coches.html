@@ -1,1 +1,77 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Garaje 2026 | Rocket League</title>
+    <style>
+        body { background-color: #0b0e14; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; }
+        .nav-back { padding: 20px; background: #05070a; }
+        .nav-back a { color: #00a2ff; text-decoration: none; font-weight: bold; }
+        
+        .garage-container { padding: 50px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .car-card { background: #1a1f29; border-radius: 15px; overflow: hidden; transition: 0.3s; border: 1px solid #333; }
+        .car-card:hover { transform: scale(1.03); border-color: #ff4e00; }
+        .car-card img { width: 100%; height: 200px; object-fit: cover; background: #000; }
+        
+        .car-info { padding: 20px; }
+        .car-title { color: #ff4e00; font-size: 1.5rem; margin: 0; text-transform: uppercase; }
+        .car-hitbox { color: #00a2ff; font-size: 0.9rem; font-weight: bold; margin-bottom: 10px; display: block; }
+        .stats { display: flex; justify-content: space-between; margin-top: 15px; font-size: 0.85rem; color: #ccc; border-top: 1px solid #333; padding-top: 10px; }
+    </style>
+</head>
+<body>
+
+<nav class="nav-back">
+    <a href="index.html">← Volver al Inicio</a>
+</nav>
+
+<h1 style="text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:3px;">Modelos Destacados 2026</h1>
+
+<main class="garage-container">
+    <!-- Coche 1: Octane -->
+    <div class="car-card">
+        <img src="https://rocketleague266624878.wordpress.com" alt="Octane">
+        <div class="car-info">
+            <span class="car-hitbox">Hitbox: Octane</span>
+            <h2 class="car-title">Octane</h2>
+            <p>El estándar de oro. Utilizado por el 90% de los profesionales por su equilibrio perfecto entre altura y longitud.</p>
+            <div class="stats">
+                <span>Agilidad: ★★★★★</span>
+                <span>Control: ★★★★★</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coche 2: Fennec -->
+    <div class="car-card">
+        <img src="https://preview.redd.it" alt="Fennec">
+        <div class="car-info">
+            <span class="car-hitbox">Hitbox: Octane</span>
+            <h2 class="car-title">Fennec</h2>
+            <p>Su forma rectangular ayuda a visualizar mejor los impactos. Es el favorito para el juego táctico y "flicks".</p>
+            <div class="stats">
+                <span>Agilidad: ★★★★☆</span>
+                <span>Precisión: ★★★★★</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coche 3: Dominus -->
+    <div class="car-card">
+        <img src="https://i.ytimg.com" alt="Dominus">
+        <div class="car-info">
+            <span class="car-hitbox">Hitbox: Dominus</span>
+            <h2 class="car-title">Dominus</h2>
+            <p>Ideal para disparos potentes y defensa aérea. Su largo cuerpo permite un mayor alcance en los bloqueos.</p>
+            <div class="stats">
+                <span>Potencia: ★★★★★</span>
+                <span>Aéreo: ★★★★☆</span>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
